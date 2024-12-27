@@ -4,38 +4,24 @@ return {
     "nvimtools/none-ls.nvim",
     config = function()
       local null_ls = require("null-ls")
-      -- setting formater yang akan dipakai
-
       null_ls.setup({
-        debug = true,
+        debug = true, -- Aktifkan log untuk debugging
         sources = {
-          -- stylua
+          -- Stylua untuk Lua
           null_ls.builtins.formatting.stylua,
-
-          -- prettier
+          -- Prettier untuk file frontend
           null_ls.builtins.formatting.prettier.with({
-            filetypes = {
-              "css",
-              "html",
-              "javascript",
-              "typescript",
-              "javascriptreact",
-              "typescriptreact",
-              "vue",
-              "json",
-              "yaml"
-            },
-            dynamic_command = function()
-              return "prettier"
-            end,
+            filetypes = { "css", "html", "javascript", "typescript", "vue", "json", "yaml", "markdown" },
+            command = "prettier", -- Gunakan Prettier dari PATH
           }),
         },
       })
 
-      vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {})
-      -- vim.keymap.set("n", "<leader>cf", function()
-      --   vim.lsp.buf.format({ timeout_ms = 5000 }) -- timeout 5 detik
-      -- end, {})
+      -- Keybinding untuk Formatting
+      vim.keymap.set("n", "<leader>cf", function()
+        vim.lsp.buf.format({ async = true, timeout_ms = 2000 }) -- Timeout 2 detik
+      end, { desc = "Format file" })
     end,
   },
 }
+
