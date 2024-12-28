@@ -18,6 +18,7 @@ return {
           "gopls",
           "svelte",
           "gopls",
+          "volar",
         },
       })
     end,
@@ -76,9 +77,9 @@ return {
       })
       -- lsp vue
       lspconfig.volar.setup({
+        capabilities = lsp_capabilities,
         filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
         on_attach = function(client, bufnr)
-          -- Aktifkan format otomatis hanya dari Volar
           if client.server_capabilities.documentFormattingProvider then
             vim.api.nvim_create_autocmd("BufWritePre", {
               buffer = bufnr,
