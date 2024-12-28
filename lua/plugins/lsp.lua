@@ -17,6 +17,7 @@ return {
           "ts_ls",
           "gopls",
           "svelte",
+          "gopls",
         },
       })
     end,

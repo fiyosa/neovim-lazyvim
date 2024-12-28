@@ -11,7 +11,7 @@ return {
           null_ls.builtins.formatting.stylua,
           -- Prettier untuk file frontend
           null_ls.builtins.formatting.prettier.with({
-            filetypes = { "css", "html", "javascript", "typescript", "vue", "json", "yaml", "markdown" },
+            filetypes = { "css", "html", "javascript", "typescript", "vue", "go", "json", "yaml", "markdown" },
             command = "prettier", -- Gunakan Prettier dari PATH
           }),
         },
@@ -24,4 +24,3 @@ return {
     end,
   },
 }
-
