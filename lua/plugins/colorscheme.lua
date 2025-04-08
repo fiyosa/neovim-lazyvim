@@ -1,11 +1,15 @@
 return {
-  { "ellisonleao/gruvbox.nvim" },
   {
     "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads first,
+    lazy = false,
     config = function()
+      require("onedarkpro").setup({
+        styles = {
+          comments = "italic",
+          functions = "bold",
+        },
+      })
       vim.cmd("colorscheme onedark")
     end,
   },
 }
-
