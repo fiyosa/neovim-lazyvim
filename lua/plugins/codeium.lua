@@ -3,6 +3,7 @@ return {
     -- :Codeium Auth
     -- :Codeium Chat
     "Exafunction/codeium.nvim",
+    enabled = true, -- set to false to disable
     dependencies = {
       "nvim-lua/plenary.nvim",
       "hrsh7th/nvim-cmp",
@@ -11,7 +12,7 @@ return {
       require("codeium").setup({
         enable_cmp_source = true,
         virtual_text = {
-          enabled = false,
+          enabled = true,
         },
       })
     end,

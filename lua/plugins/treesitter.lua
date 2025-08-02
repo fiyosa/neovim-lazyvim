@@ -1,7 +1,6 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
     opts = {
       autotag = { enable = true },
       highlight = {

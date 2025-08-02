@@ -162,8 +162,8 @@ return {
         },
         integrations = {
           telescope = true,
-          diffview = nil,
-          fzf_lua = nil,
+          diffview = false,
+          fzf_lua = false,
         },
         sections = {
           sequencer = {

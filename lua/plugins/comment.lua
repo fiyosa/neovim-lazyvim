@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 return {
   {
     "numToStr/Comment.nvim",
@@ -9,11 +10,11 @@ return {
         local utils = require("ts_context_commentstring.utils")
         local internal = require("ts_context_commentstring.internal")
 
-        local location = nil
-        if ctx.ctype == 2 then -- block
-          location = utils.get_cursor_location()
-        elseif ctx.cmotion == 1 or ctx.cmotion == 2 then -- visual mode
+        local location
+        if ctx.cmotion == 1 or ctx.cmotion == 2 then -- visual mode
           location = utils.get_visual_start_location()
+        else -- line or block comment
+          location = utils.get_cursor_location()
         end
 
         local commentstring = internal.calculate_commentstring({

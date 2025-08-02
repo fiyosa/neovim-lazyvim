@@ -3,6 +3,7 @@ return {
   event = { "InsertEnter", "CmdlineEnter" },
   init = function()
     vim.keymap.set("n", "<leader>oa", function()
+      ---@diagnostic disable-next-line: inject-field
       vim.g.toggle_cmp = not vim.g.toggle_cmp
       if vim.g.toggle_cmp then
         vim.notify("Toggled On", vim.log.levels.INFO, { title = "Autocomplete" })
@@ -39,6 +40,7 @@ return {
     require("luasnip").filetype_extend("typescript", { "typescriptreact" })
 
     --NOTE: add border for cmp window
+    ---@diagnostic disable-next-line: undefined-field
     if vim.g.border_enabled then
       opts.window = {
         completion = require("cmp").config.window.bordered(),
