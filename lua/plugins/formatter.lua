@@ -6,6 +6,7 @@ return {
         lua = { "stylua" },
         python = { "black" },
         sh = { "shfmt" },
+        php = { "php-cs-fixer" },
 
         rust = { "rustfmt" },
         go = { "goimports", "gofmt" },

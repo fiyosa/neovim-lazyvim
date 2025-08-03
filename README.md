@@ -38,6 +38,7 @@ C:\Users\{USER}\AppData\Local\nvim-data
 | Normal | `<Leader>/`        | find file with grep      |
 | Normal | `<Leader>e`        | show/hide sidebar        |
 | Normal | `gcc`              | comment                  |
+| Normal | `<Leader>uC`       | change theme      |
 | Normal | `<Leader>uw`       | enable/disable wrap      |
 | Normal | `<Leader>xx`       | show/hide problem        |
 | Normal | `<Leader>wq`       | close window             |

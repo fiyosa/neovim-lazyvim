@@ -8,3 +8,7 @@ vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 
 vim.g.autoformat = true
+
+-- Set number and relative number
+vim.opt.number = true
+vim.opt.relativenumber = true
