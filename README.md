@@ -29,25 +29,33 @@ C:\Users\{USER}\AppData\Local\nvim-data
 
 ## Shortcuts
 
-- Common nvim
+- Common lazyvim
 
-| Mode   | Key                | Description                       |
-| ------ | ------------------ | --------------------------------- |
-| Normal | `:checkhealth `    | check all dependency              |
-| Normal | `<Leader><Leader>` | find file                         |
-| Normal | `<Leader>/`        | find file with grep               |
-| Normal | `<Leader>e`        | show/hide sidebar                 |
-| Normal | `gcc`              | comment                           |
-| Normal | `<S-k>`            | hover varibale & show description |
-| Normal | `[[ / ]]`          | usage jump variable               |
-| Normal | `<Leader>sk`       | show keybindings (helper)         |
-| Normal | `<Leader>uC`       | change theme                      |
-| Normal | `<Leader>uw`       | enable/disable wrap               |
-| Normal | `<Leader>sd`       | show all list problem             |
-| Normal | `<Leader>xx`       | show problem                      |
-| Normal | `<Leader>wq`       | close window                      |
-| Normal | `<Leader>un`       | dismiss all notification          |
-| Normal | `<Leader>n`        | show notifications                |
+| Mode   | Key                | Description               |
+| ------ | ------------------ | ------------------------- |
+| Normal | `:checkhealth `    | check all dependency      |
+| Normal | `<Leader><Leader>` | find file                 |
+| Normal | `<Leader>/`        | find file with grep       |
+| Normal | `<Leader>e`        | show/hide sidebar         |
+| Normal | `<Leader>sk`       | show keybindings (helper) |
+| Normal | `<Leader>uC`       | change theme              |
+| Normal | `<Leader>uw`       | enable/disable wrap       |
+| Normal | `<Leader>sd`       | show all list problem     |
+| Normal | `<Leader>xx`       | show problem              |
+| Normal | `<Leader>wq`       | close window              |
+| Normal | `<Leader>un`       | dismiss all notification  |
+| Normal | `<Leader>n`        | show notifications        |
+
+- commond nvim
+
+| Mode   | Key       | Description                       |
+| ------ | --------- | --------------------------------- |
+| Normal | `gcc`     | comment                           |
+| Normal | `<S-k>`   | hover varibale & show description |
+| Normal | `[[ / ]]` | usage jump variable               |
+| Normal | `zM`      | close all folds                   |
+| Normal | `zR`      | open all folds                    |
+| Normal | `zr`      | open fold less                    |
 
 - Navigation tab
 
